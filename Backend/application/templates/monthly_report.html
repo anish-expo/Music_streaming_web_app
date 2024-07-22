@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Progress Report</title>
+</head>
+<body>
+    <h1>Monthly Progress Report - {{ month }}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Songs Created</th>
+                <th>Albums Created</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for creator in data %}
+            <tr>
+                <td>{{ creator.name }}</td>
+                <td>{{ creator.email }}</td>
+                <td>{{ creator.songs_created }}</td>
+                <td>{{ creator.albums_created }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
